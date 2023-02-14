@@ -45,4 +45,14 @@ public final class WorldGuardIntegrationPlugin extends JavaPlugin implements Wor
     public List<Player> getPlayersInRegion(World world, String region) {
         return WorldGuardIntegrationLib.getLib().getPlayersInRegion(world, region);
     }
+
+    @Override
+    public boolean canBypass(Player player) {
+        return WorldGuardIntegrationLib.getLib().canBypass(player);
+    }
+
+    @Override
+    public boolean canBypass(Player player, World world) {
+        return WorldGuardIntegrationLib.getLib().canBypass(player, world);
+    }
 }

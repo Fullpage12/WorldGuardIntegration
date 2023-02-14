@@ -32,4 +32,9 @@ public class WorldGuardIntegrationLib {
         }
         return instance;
     }
+
+    public static boolean isActive() {
+        return instance != null;
+    }
+
 }

@@ -18,4 +18,8 @@ public interface WorldGuardIntegration {
 
     List<Player> getPlayersInRegion(World world, String region);
 
+    boolean canBypass(Player player);
+
+    boolean canBypass(Player player, World world);
+
 }

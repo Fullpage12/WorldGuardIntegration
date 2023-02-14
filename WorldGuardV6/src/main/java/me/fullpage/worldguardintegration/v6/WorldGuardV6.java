@@ -164,4 +164,14 @@ public final class WorldGuardV6 implements WorldGuardIntegration {
         return players;
     }
 
+    @Override
+    public boolean canBypass(Player player) {
+        return WorldGuardPlugin.inst().getSessionManager().hasBypass(player, player.getWorld());
+    }
+
+    @Override
+    public boolean canBypass(Player player, World world) {
+        return WorldGuardPlugin.inst().getSessionManager().hasBypass(player, world);
+    }
+
 }
